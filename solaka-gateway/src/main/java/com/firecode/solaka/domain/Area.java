@@ -15,7 +15,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 /**
- * 全世界各国行政地区信息
+ * 地区信息
  * @author JIANG
  */
 @Getter
@@ -47,7 +47,7 @@ public class Area {
 	private String parentName;
 	
 	/**
-	 * 行政区划代码
+	 * 区划代码
 	 */
 	@Column("area_code")
 	@CassandraType(type=Name.TEXT)
