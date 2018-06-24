@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.firecode</groupId>
+		<artifactId>solaka</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>solaka-gateway</artifactId>
+	<packaging>jar</packaging>
+	<name>solaka-gateway</name>
+	<url></url>
+	<properties>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.firecode</groupId>
+			<artifactId>kabouros-boot</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.firecode</groupId>
+			<artifactId>kabouros-webflux</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.firecode</groupId>
+			<artifactId>kabouros-cassandra</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-zookeeper-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-zookeeper-discovery</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.3</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<!-- 程序入口 -->
+					<mainClass>com.firecode.solaka.Application</mainClass>
+					<!-- 解决控制台乱码问题 -->
+					<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

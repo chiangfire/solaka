@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: solaka
+  cloud:
+    zookeeper:
+      enabled: false                      #是否启用zookeeper
+      connectString: 127.0.0.1:2181
+      discovery:
+        enabled: false                    #是否启动服务注册发现
+        register: false                   #是否注册服务
+        root: kabourosServices            #服务注册根目录<需提前创建，否则报错>
+      config:
+        enabled: false                    #是否使用zookeeper配置
+        root: kabourosConfig              #配置信息根路径
+        profileSeparator: '::'            #项目名称与profile分割符
+        watcher:
+          enabled: false                  #是否监听数据变化

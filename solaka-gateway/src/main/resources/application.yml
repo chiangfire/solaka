@@ -1,0 +1,16 @@
+server:
+  port: 8090
+logging:
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    org.springframework.security: INFO
+#    org.springframework.boot.autoconfigure: DEBUG
+
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.cassandra.CassandraAutoConfiguration,
+             org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoConfiguration,
+             org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveDataAutoConfiguration,
+             org.springframework.boot.autoconfigure.data.cassandra.CassandraRepositoriesAutoConfiguration,
+             org.springframework.boot.autoconfigure.data.cassandra.CassandraReactiveRepositoriesAutoConfiguration
